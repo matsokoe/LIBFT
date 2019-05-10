@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/07 17:44:11 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/08 10:07:54 by matsokoe         ###   ########.fr       */
+/*   Created: 2019/05/08 10:20:53 by matsokoe          #+#    #+#             */
+/*   Updated: 2019/05/08 11:14:01 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-int		ft_atoi(const char *str)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
-	int result;
-	int is_neg;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	result = 0;
-	is_neg = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r' ||
-			str[i] == '\f' || str[i] == '\v' || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	j = 0;
+	while (src[i] && i < len)
 	{
-		if (str[i] == '-')
-			is_neg = 1;
+		dst[i] = src[i];
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (i < len)
 	{
-		result = result * 10 + str[i] - 48;
+		dst[i] = '\0';
 		i++;
 	}
-	if (is_neg == 1)
-		(result *= -1);
-	return (result);
+	return (dst);
 }
