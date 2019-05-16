@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:12:48 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 12:10:20 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/16 15:47:31 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *str)
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char	*buf_src;
-	size_t 	i;
+	size_t	i;
 	size_t	j;
 	size_t	count;
 	size_t	temp;
@@ -49,8 +49,10 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	}
 	count = 0;
-	while (count < size && size <= temp)
+	while (count < size)
 	{
+		if (size > temp)
+			return (temp + j);
 		dst[i] = '\0';
 		i++;
 		count++;
@@ -89,9 +91,9 @@ int		main()
 	char s7[10] = "LOL";
 	char d7a[50] = "\t poi 77- ee\f";
 	char s7a[10] = "LOL";
-	char d8[90] = "oeiurpoii";
+	char d8[90] = "oeii";
 	char s8[50] = "poie jdksja ";
-	char d8a[90] = "oeiurpoii";
+	char d8a[90] = "oeii";
 	char s8a[50] = "poie jdksja ";
 	char d9[50] = "iiiiiiiiiiiiiiiiiiiii";
 	char s9[50] = "pour";
@@ -109,17 +111,17 @@ int		main()
 	printf("%lu\n", ft_strlcat(d2, s2, 0));
 	printf("%lu\n", strlcat(d2a, s2a, 0));
 	printf("----------------------test3---------------------\n");
-	printf("%lu\n", ft_strlcat(d3, s3, 3));
-	printf("%lu\n", strlcat(d3a, s3a, 3));
+	printf("%lu\n", ft_strlcat(d3, s3, 9));
+	printf("%lu\n", strlcat(d3a, s3a, 9));
 	printf("----------------------test4---------------------\n");
 	printf("%lu\n", ft_strlcat(d4, s4, 3));
 	printf("%lu\n", strlcat(d4a, s4a, 3));
 	printf("----------------------test5---------------------\n");
-	printf("%lu\n", ft_strlcat(d5, s5, 6));
-	printf("%lu\n", strlcat(d5a, s5a, 6));
+	printf("%lu\n", ft_strlcat(d5, s5, 5));
+	printf("%lu\n", strlcat(d5a, s5a, 5));
 	printf("----------------------test6---------------------\n");
-	printf("%lu\n", ft_strlcat(d6, s6, 12));
-	printf("%lu\n", strlcat(d6a, s6a, 12));
+	printf("%lu\n", ft_strlcat(d6, s6, 2));
+	printf("%lu\n", strlcat(d6a, s6a, 2));
 	printf("----------------------test7---------------------\n");
 	printf("%lu\n", ft_strlcat(d7, s7, 0));
 	printf("%lu\n", strlcat(d7a, s7a, 0));
