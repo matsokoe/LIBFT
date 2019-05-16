@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 15:08:02 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/15 15:46:56 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/16 14:44:33 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strstr(char *str, char *to_find)
 	int temp;
 
 	t = 0;
-	if (!str)
-		return (NULL);
 	if (to_find[t] == '\0')
 		return (str);
 	s = 0;
