@@ -6,32 +6,31 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:32:27 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 17:08:20 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/17 16:45:44 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unsitd.h>
+#include <unistd.h>
 
-void	ft_putchar_fd(char c)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 
-void	ft_putnbr(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int nbr;
 
 	nbr = n;
 	if (n < 0)
 	{
-		write(1, '-', 1);
+		ft_putchar_fd('-', fd);
 		nbr = -n;
 	}
 	while (nbr > 9)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putchar(nbr % 10);
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putchar_fd(nbr % 10, fd);
 	}
-	else
-		ft_putchar(nbr % 10);
+	ft_putchar_fd(nbr % 10, fd);
 }
