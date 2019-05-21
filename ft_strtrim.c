@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:30:21 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:30:22 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:22:47 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strtrim(char const *s)
+{
+}

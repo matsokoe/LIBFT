@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:32:18 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:32:19 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 13:59:06 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_putendl_fd(char const *s, int fd)
+{
+}

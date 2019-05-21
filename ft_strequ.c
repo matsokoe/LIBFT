@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:28:51 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:28:52 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:09:14 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int		ft_strequ(char const *s1, char const *s2)
+{
+}

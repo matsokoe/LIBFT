@@ -6,11 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:27:28 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/20 10:19:28 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:01:15 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
+
 char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t i;

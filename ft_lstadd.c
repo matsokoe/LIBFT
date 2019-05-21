@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:00:28 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 10:00:29 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 13:51:21 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_lstadd(t_list **alst, t_list *new)
+{
+}

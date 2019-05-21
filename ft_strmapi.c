@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:28:38 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:28:39 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:08:42 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+}

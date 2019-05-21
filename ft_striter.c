@@ -6,8 +6,12 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:58 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:27:59 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:05:47 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_striter(char *s, void (*f)(char *))
+{
+}
