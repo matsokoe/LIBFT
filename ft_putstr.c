@@ -6,22 +6,23 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:31:22 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:48:23 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:37:13 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
-	char	*buf_s;
 	int		i;
 
-	buf_s = (char *)s;
 	i = 0;
-	while (s[i])
+	if (s != '\0')
 	{
-		write(1, &s[i], 1);
-		i++;
+		while (s[i] != '\0')
+		{
+			write(1, &s[i], 1);
+			i++;
+		}
 	}
 }
