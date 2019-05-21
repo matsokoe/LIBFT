@@ -6,11 +6,11 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/14 09:34:16 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/15 16:14:43 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:16:25 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

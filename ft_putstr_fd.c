@@ -6,13 +6,13 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:32:08 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:50:55 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:19:46 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	char	*buf_s;
 	int		i;
@@ -21,7 +21,7 @@ void	ft_putstr_fd(char const *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		write(fd, &str[i], 1);
+		write(fd, &buf_s[i], 1);
 		i++;
 	}
 }

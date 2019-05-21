@@ -6,8 +6,17 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:12 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/16 16:27:13 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/21 11:10:13 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_memdel(void **ap)
+{
+	if (**ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
+}

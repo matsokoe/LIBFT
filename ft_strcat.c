@@ -6,11 +6,11 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 12:14:27 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/15 16:15:44 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:20:05 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

@@ -6,12 +6,11 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 10:20:53 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/15 16:17:40 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:19:50 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
