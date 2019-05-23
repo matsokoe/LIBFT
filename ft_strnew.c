@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:24 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 20:04:30 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/22 11:19:23 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strnew(size_t size)
 {
 	char *str;
-	
+
 	str = (char *)malloc(sizeof(char) + 1);
 	if (str == NULL)
 		return (NULL);
@@ -23,12 +23,12 @@ char	*ft_strnew(size_t size)
 	return (str);
 }
 
-int		main()
+int		main(void)
 {
 	char *buf;
 
 	buf = ft_strnew(6);
 	ft_strcpy(buf, "Mariam");
 	ft_putstr(buf);
-	return (0);	
+	return (0);
 }
