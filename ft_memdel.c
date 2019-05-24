@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:12 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/22 11:16:35 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:27:42 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,4 @@ void	ft_memdel(void **ap)
 		free(*ap);
 		*ap = NULL;
 	}
-}
-
-int		main(int argc, char **argv)
-{
-	char *str;
-
-	str = (char *)malloc(sizeof(char) * 5);
-	if (str == NULL)
-		return (0);
-	ft_strcpy(str, "TOTO");
-	ft_putstr(str);
-	ft_memdel((void **)&str);
-	if (str == NULL)
-		ft_putstr("IL EST NUL");
-	return (0);
 }

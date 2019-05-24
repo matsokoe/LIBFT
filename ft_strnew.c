@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:24 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/22 11:19:23 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:28:43 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,4 @@ char	*ft_strnew(size_t size)
 		return (NULL);
 	ft_bzero(str, size);
 	return (str);
-}
-
-int		main(void)
-{
-	char *buf;
-
-	buf = ft_strnew(6);
-	ft_strcpy(buf, "Mariam");
-	ft_putstr(buf);
-	return (0);
 }

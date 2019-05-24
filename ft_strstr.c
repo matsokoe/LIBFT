@@ -6,35 +6,31 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 15:08:02 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 10:18:48 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:37:25 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(const char *s, const char *find)
 {
-	int s;
-	int t;
-	int temp;
+	size_t	i;
+	size_t	j;
+	size_t	buf;
 
-	t = 0;
-	if (to_find[t] == '\0')
-		return ((char*)str);
-	s = 0;
-	while (str[s] != '\0')
+	i = 0;
+	if (find[0] == '\0')
+		return ((char *)s);
+	while (s[i] && s[i] != find[0])
 	{
-		t = 0;
-		temp = s;
-		while (to_find[t] != '\0' && str[s] != '\0' && str[s] == to_find[t])
-		{
-			t++;
-			s++;
-		}
-		if (to_find[t] == '\0')
-			return ((char*)&str[temp]);
-		s = temp;
-		s++;
+		if (s[i] == '\0')
+			return (NULL);
+		i++;
 	}
-	return (0);
+	buf = i;
+	j = 0;
+	while (s[i++] == find[j++])
+		if (find[j] == '\0')
+			return ((char *)&s[buf]);
+	return (NULL);
 }
