@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:27:28 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 14:01:15 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/24 14:20:05 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t i;
 
-	i = 0;
-	while (src[i] != '\0')
-	{
+	i = -1;
+	while (src[++i] != '\0')
 		dst[i] = src[i];
-		i++;
-	}
 	dst[i] = '\0';
 	return (dst);
 }
