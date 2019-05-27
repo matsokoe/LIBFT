@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:10:50 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 10:03:04 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:38:07 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *buf_s;
+	unsigned char	*buf_s;
+	size_t			i;
 
+	i = 0;
 	buf_s = (unsigned char *)s;
-	while (n > 0)
+	while (i < n)
 	{
-		buf_s[n] = 0;
-		n--;
+		buf_s[i] = 0;
+		i++;
 	}
 }

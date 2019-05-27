@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:30:08 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/23 20:26:20 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:28:29 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!(str = ft_strnew(len_s1 + len_s2 + 1)))
 		return (0);
 	while (s1)
-		str[i++] = s1[i++];
+	{
+		str[i] = s1[i];
+		i++;
+	}
 	i--;
 	j = 0;
 	while (s2)
 		str[i++] = s2[j++];
-	str[len_s1 + len_s2 + 1];
+	str[len_s1 + len_s2 + 1] = '\0';
 	return (str);
 }

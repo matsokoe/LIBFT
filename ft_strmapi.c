@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:28:38 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/24 11:07:16 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:27:29 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		while (s[i] != '\0')
 		{
-			map[i] = f(i, s[i]);
+			str[i] = f(i, s[i]);
 			i++;
 		}
 	}
-	return (map);
+	return (str);
 }
