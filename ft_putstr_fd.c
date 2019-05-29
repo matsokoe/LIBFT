@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:32:08 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 10:19:46 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/29 11:03:18 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ void	ft_putstr_fd(const char *s, int fd)
 
 	buf_s = (char *)s;
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		write(fd, &buf_s[i], 1);
-		i++;
+		while (s[i])
+		{
+			write(fd, &buf_s[i], 1);
+			i++;
+		}
 	}
 }

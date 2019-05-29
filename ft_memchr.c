@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:11:52 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/24 13:59:52 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/28 09:56:12 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	buf_s = (unsigned char *)s;
-	while (i <= n && buf_s[i] != c)
+	while (i < n)
 	{
-		if (buf_s[i] == '\0')
-			return (0);
+		if (buf_s[i] == (unsigned char)c)
+			return (&buf_s[i]);
 		i++;
 	}
-	if (buf_s[n - 1] != c)
-		return (0);
-	return (&buf_s[i]);
+	return (0);
 }

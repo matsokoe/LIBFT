@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 16:27:24 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/24 10:28:43 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/28 12:19:28 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *str;
+	char	*str;
 
-	str = (char *)malloc(sizeof(char) + 1);
+	str = ft_memalloc(size + 1);
 	if (str == NULL)
 		return (NULL);
-	ft_bzero(str, size);
 	return (str);
 }

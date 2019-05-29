@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:11:37 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/27 21:24:53 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:00:17 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (i < len)
 		{
 			buf_dst[len - 1] = buf_src[len - 1];
-			len --;
+			len--;
 		}
-
 	}
 	else
 		while (i < len)
