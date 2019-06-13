@@ -6,38 +6,31 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:12:48 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/28 10:27:59 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/06/11 15:22:41 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-size_t		ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	size_t	i;
-	size_t	j;
-	size_t	count;
-	size_t	temp;
+	size_t	len_dest;
+	size_t	len_src;
 
-	if (src[0] == '\0' && dst[0] == '\0')
-		return (0);
-	if (dst[0] == '\0')
-		return (ft_strlen(src));
-	if (src[0] == '\0')
-		return (size);
-	i = ft_strlen(dst);
-	j = -1;
-	temp = i;
-	while (src[++j] != '\0')
-		dst[i + j] = src[j];
-	count = -1;
-	while (++count < size)
+	len_dest = ft_strlen(dest);
+	len_src = ft_strlen(src);
+	if (n <= len_dest)
+		return (n + len_src);
+	if (len_src < n - len_dest)
 	{
-		if (size > temp)
-			return (temp + j);
-		dst[i] = '\0';
-		i++;
+		ft_memcpy(dest + len_dest, src, len_src);
+		dest += len_dest + len_src;
 	}
-	return (count + j);
+	else
+	{
+		ft_memcpy(dest + len_dest, src, n - len_dest - 1);
+		dest += n - 1;
+	}
+	*dest = '\0';
+	return (len_src + len_dest);
 }

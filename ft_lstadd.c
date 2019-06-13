@@ -6,7 +6,7 @@
 /*   By: matsokoe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:00:28 by matsokoe          #+#    #+#             */
-/*   Updated: 2019/05/21 13:51:21 by matsokoe         ###   ########.fr       */
+/*   Updated: 2019/06/12 17:24:57 by matsokoe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,6 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
+	new->next = *alst;
+	*alst = new;
 }
